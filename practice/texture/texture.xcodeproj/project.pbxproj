@@ -14,8 +14,6 @@
 		921879AB1BB9902D005C1E31 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = 921879A61BB9902D005C1E31 /* SOIL.c */; };
 		921879AC1BB9902D005C1E31 /* SOIL.h in Sources */ = {isa = PBXBuildFile; fileRef = 921879A71BB9902D005C1E31 /* SOIL.h */; };
 		921879AD1BB9902D005C1E31 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = 921879A81BB9902D005C1E31 /* stb_image_aug.c */; };
-		921879B11BB99085005C1E31 /* earth.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 921879AE1BB99085005C1E31 /* earth.jpg */; };
-		921879B21BB99085005C1E31 /* moon2.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 921879AF1BB99085005C1E31 /* moon2.jpg */; };
 		921879B31BB99085005C1E31 /* sun.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 921879B01BB99085005C1E31 /* sun.bmp */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +24,6 @@
 			dstPath = resources;
 			dstSubfolderSpec = 7;
 			files = (
-				921879B11BB99085005C1E31 /* earth.jpg in CopyFiles */,
-				921879B21BB99085005C1E31 /* moon2.jpg in CopyFiles */,
 				921879B31BB99085005C1E31 /* sun.bmp in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,8 +39,6 @@
 		921879A61BB9902D005C1E31 /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = "../../library/Simple OpenGL Image Library/src/SOIL.c"; sourceTree = "<group>"; };
 		921879A71BB9902D005C1E31 /* SOIL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SOIL.h; path = "../../library/Simple OpenGL Image Library/src/SOIL.h"; sourceTree = "<group>"; };
 		921879A81BB9902D005C1E31 /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = "../../library/Simple OpenGL Image Library/src/stb_image_aug.c"; sourceTree = "<group>"; };
-		921879AE1BB99085005C1E31 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = earth.jpg; path = ../../resources/img/earth.jpg; sourceTree = "<group>"; };
-		921879AF1BB99085005C1E31 /* moon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = moon2.jpg; path = ../../resources/img/moon2.jpg; sourceTree = "<group>"; };
 		921879B01BB99085005C1E31 /* sun.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = sun.bmp; path = ../../resources/img/sun.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,8 +57,6 @@
 		9218798F1BB98FF2005C1E31 = {
 			isa = PBXGroup;
 			children = (
-				921879AE1BB99085005C1E31 /* earth.jpg */,
-				921879AF1BB99085005C1E31 /* moon2.jpg */,
 				921879B01BB99085005C1E31 /* sun.bmp */,
 				921879A41BB9902D005C1E31 /* image_DXT.c */,
 				921879A51BB9902D005C1E31 /* image_helper.c */,
@@ -273,6 +265,7 @@
 				921879A11BB98FF2005C1E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

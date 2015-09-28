@@ -8,23 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		92CD2F541BB993BC00C5B906 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 92CD2F531BB993BC00C5B906 /* main.c */; };
+		92CD2F5B1BB993D100C5B906 /* src in Sources */ = {isa = PBXBuildFile; fileRef = 92CD2F5A1BB993D100C5B906 /* src */; };
+		92CD2F611BB993EF00C5B906 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = 92CD2F5C1BB993EF00C5B906 /* image_DXT.c */; };
+		92CD2F621BB993EF00C5B906 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 92CD2F5D1BB993EF00C5B906 /* image_helper.c */; };
+		92CD2F631BB993EF00C5B906 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = 92CD2F5E1BB993EF00C5B906 /* SOIL.c */; };
+		92CD2F641BB993EF00C5B906 /* SOIL.h in Sources */ = {isa = PBXBuildFile; fileRef = 92CD2F5F1BB993EF00C5B906 /* SOIL.h */; };
+		92CD2F651BB993EF00C5B906 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = 92CD2F601BB993EF00C5B906 /* stb_image_aug.c */; };
+		92CD2F671BB993FA00C5B906 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CD2F661BB993FA00C5B906 /* OpenGL.framework */; };
+		92CD2F711BB99A1100C5B906 /* earth.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92CD2F6E1BB99A1100C5B906 /* earth.bmp */; };
+		92CD2F721BB99A1100C5B906 /* moon.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92CD2F6F1BB99A1100C5B906 /* moon.bmp */; };
+		92CD2F751BB99A4C00C5B906 /* sun.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92CD2F741BB99A4C00C5B906 /* sun.bmp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		92CD2F4E1BB993BC00C5B906 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = resources;
+			dstSubfolderSpec = 7;
 			files = (
+				92CD2F751BB99A4C00C5B906 /* sun.bmp in CopyFiles */,
+				92CD2F711BB99A1100C5B906 /* earth.bmp in CopyFiles */,
+				92CD2F721BB99A1100C5B906 /* moon.bmp in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		92CD2F501BB993BC00C5B906 /* prob4_texturedSolarSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = prob4_texturedSolarSystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CD2F531BB993BC00C5B906 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		92CD2F5A1BB993D100C5B906 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = "../library/Simple OpenGL Image Library/src"; sourceTree = "<group>"; };
+		92CD2F5C1BB993EF00C5B906 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = "../library/Simple OpenGL Image Library/src/image_DXT.c"; sourceTree = "<group>"; };
+		92CD2F5D1BB993EF00C5B906 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = "../library/Simple OpenGL Image Library/src/image_helper.c"; sourceTree = "<group>"; };
+		92CD2F5E1BB993EF00C5B906 /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = "../library/Simple OpenGL Image Library/src/SOIL.c"; sourceTree = "<group>"; };
+		92CD2F5F1BB993EF00C5B906 /* SOIL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SOIL.h; path = "../library/Simple OpenGL Image Library/src/SOIL.h"; sourceTree = "<group>"; };
+		92CD2F601BB993EF00C5B906 /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = "../library/Simple OpenGL Image Library/src/stb_image_aug.c"; sourceTree = "<group>"; };
+		92CD2F661BB993FA00C5B906 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		92CD2F6E1BB99A1100C5B906 /* earth.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = earth.bmp; path = ../resources/img/earth.bmp; sourceTree = "<group>"; };
+		92CD2F6F1BB99A1100C5B906 /* moon.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = moon.bmp; path = ../resources/img/moon.bmp; sourceTree = "<group>"; };
+		92CD2F741BB99A4C00C5B906 /* sun.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = sun.bmp; path = ../resources/img/sun.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CD2F671BB993FA00C5B906 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +65,16 @@
 		92CD2F471BB993BC00C5B906 = {
 			isa = PBXGroup;
 			children = (
+				92CD2F741BB99A4C00C5B906 /* sun.bmp */,
+				92CD2F6E1BB99A1100C5B906 /* earth.bmp */,
+				92CD2F6F1BB99A1100C5B906 /* moon.bmp */,
+				92CD2F661BB993FA00C5B906 /* OpenGL.framework */,
+				92CD2F5C1BB993EF00C5B906 /* image_DXT.c */,
+				92CD2F5D1BB993EF00C5B906 /* image_helper.c */,
+				92CD2F5E1BB993EF00C5B906 /* SOIL.c */,
+				92CD2F5F1BB993EF00C5B906 /* SOIL.h */,
+				92CD2F601BB993EF00C5B906 /* stb_image_aug.c */,
+				92CD2F5A1BB993D100C5B906 /* src */,
 				92CD2F521BB993BC00C5B906 /* prob4_texturedSolarSystem */,
 				92CD2F511BB993BC00C5B906 /* Products */,
 			);
@@ -118,6 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CD2F611BB993EF00C5B906 /* image_DXT.c in Sources */,
+				92CD2F621BB993EF00C5B906 /* image_helper.c in Sources */,
+				92CD2F631BB993EF00C5B906 /* SOIL.c in Sources */,
+				92CD2F641BB993EF00C5B906 /* SOIL.h in Sources */,
+				92CD2F651BB993EF00C5B906 /* stb_image_aug.c in Sources */,
+				92CD2F5B1BB993D100C5B906 /* src in Sources */,
 				92CD2F541BB993BC00C5B906 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +245,7 @@
 		92CD2F581BB993BC00C5B906 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +253,7 @@
 		92CD2F591BB993BC00C5B906 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -41,7 +41,7 @@ void RenderScene()
     //int width, height;
     //unsigned char* image = SOIL_load_image("/Users/JoJo/texture.bmp", &width, &height, 0, SOIL_LOAD_RGB);
     
-    tex = SOIL_load_OGL_texture("resources/earth.jpg", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
+    tex = SOIL_load_OGL_texture("resources/sun.bmp", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
     if(tex==0)
         printf("load image failed");
     
@@ -50,8 +50,6 @@ void RenderScene()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     
-    
-    
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     
@@ -59,8 +57,6 @@ void RenderScene()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     
     //glTexImage2D(GL_TEXTURE_2D, 0, 3, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
-    
-    
     
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_DEPTH_TEST);
@@ -125,7 +121,7 @@ int main(int argc, char* argv[])
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800,800);
     glutInitWindowPosition(0,0);
-    glutCreateWindow("Solar system with texture");
+    glutCreateWindow("teapot with texture");
     glutSpecialFunc(KeyControl);
     glutReshapeFunc(ChangeSize);
     glutDisplayFunc(RenderScene);
