@@ -47,6 +47,7 @@ void SetupRC()
     glFrontFace(GL_CCW);
     glEnable(GL_CULL_FACE);
     
+    // http://stackoverflow.com/questions/25592313/opengl-texturing-sphere-using-soil 참고.
     pSphere = gluNewQuadric();
     gluQuadricDrawStyle(pSphere, GLU_FILL);
     gluQuadricNormals(pSphere, GLU_SMOOTH);
