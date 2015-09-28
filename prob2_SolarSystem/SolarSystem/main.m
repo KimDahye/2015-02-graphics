@@ -90,7 +90,7 @@ void RenderScene()
     glutSolidSphere(6.0f,15,15);
     glPushMatrix();
     
-    glRotatef(fElect1, 0.0f,1.0f,0.0f);
+    glRotatef(fElect2, 0.0f,1.0f,0.0f);
     glTranslatef(10.0f,0.0f,0.0f);
     glColor3ub(232,160,26);
     glutSolidSphere(2.0f,15,15);
