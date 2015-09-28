@@ -125,12 +125,14 @@ int main(int argc, char* argv[])
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800,800);
     glutInitWindowPosition(0,0);
-    glutCreateWindow("2D texture");
+    glutCreateWindow("Solar system with texture");
     glutSpecialFunc(KeyControl);
     glutReshapeFunc(ChangeSize);
     glutDisplayFunc(RenderScene);
+//    glutTimerFunc(33,TimerFunc,1);
     
     SetupRC();
     glutMainLoop();
-    
+    return 0;
 }
+
