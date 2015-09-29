@@ -15,6 +15,8 @@
 static GLfloat xRot = 0.0f;
 static GLfloat yRot = 0.0f;
 static GLfloat zDistance = 0.0f;
+
+float sunRotate = 0.0f;
 float fElect1 = 0.0f;
 float fElect2 = 0.0f;
 GLUquadricObj *pSphere = NULL;
@@ -60,17 +62,6 @@ void SetupRC()
     gluQuadricDrawStyle(pSphere, GLU_FILL);
     gluQuadricNormals(pSphere, GLU_SMOOTH);
     gluQuadricTexture(pSphere, GLU_TRUE);
-
-    /*light add*/
-    GLfloat amb[] = {0.1f,0.1f,0.1f};
-    GLfloat diff[] = { 1.0f,1.0f,1.0f};
-    glEnable(GL_LIGHTING);
-    glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
-    glEnable(GL_LIGHT0);
-    glEnable(GL_COLOR_MATERIAL);
-    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
-   
 }
 
 void initTex()
@@ -86,41 +77,62 @@ void TimerFunc(value)
     glutTimerFunc(100, TimerFunc, 1);
 }
 
+void lightSetting (GLfloat * amb, GLfloat * diff) {
+    glEnable(GL_LIGHTING);
+    glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_COLOR_MATERIAL);
+    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+}
+
 void RenderScene()
 {
     // TODO. 지구 texture mapping된 걸 보니, 태양 지구 달의 축이 90도 틀어졌다.
     // texture mapping할 때 축을 지정해 줄 수 있을까?
     // 그럴 수 없다면 RenderScene 에서 기준 좌표계를 틀어줘야 하는 걸까?
-
-    static GLfloat fElect1=0.0f;
+   
+    //multi light이 잘 안되서, 태양의 amb light값만 높임.
+    GLfloat amb[] = {1.0f,1.0f,1.0f};
+    GLfloat diff[] = { 1.0f,1.0f,1.0f};
+    lightSetting(amb, diff);
+    
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glTranslatef(0.0f, 0.0f, -100.0f);
-    
+    glPushMatrix();
+
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_DEPTH_TEST); // TODO. 왜 SetupRC에도 있는데.. RenderScene에도 있어야 할까?
     glBindTexture(GL_TEXTURE_2D, sunTex);
-    glColor3ub(255, 230, 80);
+    glRotatef(sunRotate, 0.0f,1.0f,0.0f);// 태양 자전
+    glColor3ub(255, 255, 255);
     gluSphere(pSphere, 20.0f, 18, 18); //glutSolidSphere로 그리면 texture mapping이 안된다!
-    glPushMatrix();
     
-    
+    GLfloat amb2[] = {0.01f,0.01f,0.01f}; //amb 값 낮춤.
+    lightSetting(amb2, diff);
+
     glBindTexture(GL_TEXTURE_2D, earthTex);
+    glPopMatrix();
     glRotatef(fElect1, 0.0f,1.0f,0.0f);
     glTranslatef(90.0f,0.0f,0.0f);
-    glColor3ub(65, 149, 192);
+    glColor3ub(255, 255, 255);
     gluSphere(pSphere, 6.0f, 18, 18);
     glPushMatrix();
     
     glBindTexture(GL_TEXTURE_2D, moonTex);
     glRotatef(fElect2, 0.0f,1.0f,0.0f);
     glTranslatef(10.0f,0.0f,0.0f);
-    glColor3ub(232,160,26);
+    glColor3ub(255,255,255);
     gluSphere(pSphere, 2.0f, 18, 18);
     
+    sunRotate += 5.0f;
     fElect1 += 5.0f;
     fElect2 += 60.0f;
+    
+    if(sunRotate > 360.0f)
+        sunRotate = 0.0f;
     
     if(fElect1 > 360.0f)
         fElect1 = 0.0f;
@@ -158,7 +170,7 @@ void KeyControl(int key, int x, int y)
 void ChangeSize(int w, int h)
 {
     GLfloat lightPos0[] = {0.0f, 0.0f, -100.0f, 1.0f };
-    GLfloat lightPos1[] = {10.0f, 0.0f, -80.0f, 1.0f };
+//    GLfloat lightPos1[] = {-20.0f, 0.0f, -100.0f, 1.0f };
     GLfloat nRange = 100.0f;
     glViewport(0,0,w,h);
     glMatrixMode(GL_PROJECTION);
@@ -169,8 +181,8 @@ void ChangeSize(int w, int h)
     else{
         glOrtho(-nRange*w/h,nRange*w/h,-nRange,nRange, -nRange*2.0f,nRange*2.0f);
     }
-    glLightfv(GL_LIGHT0,GL_POSITION,lightPos0);
-    glLightfv(GL_LIGHT1,GL_POSITION,lightPos1);
+    glLightfv(GL_LIGHT0, GL_POSITION,lightPos0);
+//    glLightfv(GL_LIGHT1, GL_POSITION,lightPos1);
     
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -188,7 +200,7 @@ int main(int argc, char* argv[])
     glutDisplayFunc(RenderScene);
     initTex();
     //이동하는 것을 보려면 glutTimerFunc에 걸린 주석을 풀면 된다. 화살표 키로도 움직이는 것을 볼 수있다.
-    //glutTimerFunc(33,TimerFunc,1);
+    glutTimerFunc(33,TimerFunc,1);
     SetupRC();
     glutMainLoop();
     return 0;
