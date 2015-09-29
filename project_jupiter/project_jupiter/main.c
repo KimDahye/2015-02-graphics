@@ -108,7 +108,7 @@ void RenderScene()
     glBindTexture(GL_TEXTURE_2D, jupiterTex);
     glRotatef(sunRotate, 0.0f, 1.0f, 0.0f);// 목성 자전
     glColor3ub(255, 255, 255);
-    gluSphere(pSphere, 50.0f, 25, 25); //glutSolidSphere로 그리면 texture mapping이 안된다!
+    gluSphere(pSphere, 50.0f, 35, 35); //glutSolidSphere로 그리면 texture mapping이 안된다!
     
 //    GLfloat amb2[] = {1.0f,1.01f,1.01f};
 //    lightSetting(amb2, diff);
@@ -187,12 +187,12 @@ int main(int argc, char* argv[])
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800,800);
     glutInitWindowPosition(0,0);
-    glutCreateWindow("Solar system with texture");
+    glutCreateWindow("jupiter rotation");
     glutSpecialFunc(KeyControl);
     glutReshapeFunc(ChangeSize);
     glutDisplayFunc(RenderScene);
     initTex();
-    glutTimerFunc(33,TimerFunc,1);
+    //glutTimerFunc(33,TimerFunc,1);
     SetupRC();
     glutMainLoop();
     return 0;
