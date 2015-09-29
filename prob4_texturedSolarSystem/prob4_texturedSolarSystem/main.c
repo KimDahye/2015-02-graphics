@@ -47,22 +47,30 @@ void SetupRC()
     glFrontFace(GL_CCW);
     glEnable(GL_CULL_FACE);
     
-    // http://stackoverflow.com/questions/25592313/opengl-texturing-sphere-using-soil 참고.
+    /* for lighting on texture mapping
+     * http://stackoverflow.com/questions/27712437/opengl-how-do-i-affect-the-lighting-on-a-textured-plane 참고.
+     */
+    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE,GL_MODULATE );
+    
+    
+    /* for texture mapping 
+     * http://stackoverflow.com/questions/25592313/opengl-texturing-sphere-using-soil 참고.
+     */
     pSphere = gluNewQuadric();
     gluQuadricDrawStyle(pSphere, GLU_FILL);
     gluQuadricNormals(pSphere, GLU_SMOOTH);
     gluQuadricTexture(pSphere, GLU_TRUE);
 
-//    조명이 먹지 않아서 주석 처리함.
-//    /*light add*/
-//    GLfloat amb[] = {0.5f,0.5f,0.5f};
-//    GLfloat diff[] = { 0.7f,0.7f,0.7f};
-//    glEnable(GL_LIGHTING);
-//    glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
-//    glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
-//    glEnable(GL_LIGHT0);
-//    glEnable(GL_COLOR_MATERIAL);
-//    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+    /*light add*/
+    GLfloat amb[] = {0.1f,0.1f,0.1f};
+    GLfloat diff[] = { 1.0f,1.0f,1.0f};
+    glEnable(GL_LIGHTING);
+    glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_COLOR_MATERIAL);
+    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+   
 }
 
 void initTex()
@@ -96,6 +104,7 @@ void RenderScene()
     glColor3ub(255, 230, 80);
     gluSphere(pSphere, 20.0f, 18, 18); //glutSolidSphere로 그리면 texture mapping이 안된다!
     glPushMatrix();
+    
     
     glBindTexture(GL_TEXTURE_2D, earthTex);
     glRotatef(fElect1, 0.0f,1.0f,0.0f);
