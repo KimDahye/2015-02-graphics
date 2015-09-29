@@ -7,57 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9227254D1BBA57FC00DBC92C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9227254C1BBA57FC00DBC92C /* main.cpp */; };
+		922725601BBA633600DBC92C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9227255F1BBA633600DBC92C /* main.c */; };
+		922725671BBA635400DBC92C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922725661BBA635400DBC92C /* OpenGL.framework */; };
+		9227256B1BBA637400DBC92C /* earth.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 922725681BBA637400DBC92C /* earth.bmp */; };
+		9227256C1BBA637400DBC92C /* moon.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 922725691BBA637400DBC92C /* moon.bmp */; };
+		9227256D1BBA637400DBC92C /* sun.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9227256A1BBA637400DBC92C /* sun.bmp */; };
+		922725731BBA63A100DBC92C /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = 9227256E1BBA63A100DBC92C /* image_DXT.c */; };
+		922725741BBA63A100DBC92C /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 9227256F1BBA63A100DBC92C /* image_helper.c */; };
+		922725751BBA63A100DBC92C /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = 922725701BBA63A100DBC92C /* SOIL.c */; };
+		922725761BBA63A100DBC92C /* SOIL.h in Sources */ = {isa = PBXBuildFile; fileRef = 922725711BBA63A100DBC92C /* SOIL.h */; };
+		922725771BBA63A100DBC92C /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = 922725721BBA63A100DBC92C /* stb_image_aug.c */; };
+		922725791BBA63F900DBC92C /* src in Sources */ = {isa = PBXBuildFile; fileRef = 922725781BBA63F900DBC92C /* src */; };
+		9227257C1BBA6B3400DBC92C /* jupiter.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9227257A1BBA6B3400DBC92C /* jupiter.bmp */; };
+		9227257D1BBA6B3400DBC92C /* space.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9227257B1BBA6B3400DBC92C /* space.bmp */; };
+		922725801BBA815800DBC92C /* galaxy.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9227257E1BBA815800DBC92C /* galaxy.png */; };
+		922725811BBA815800DBC92C /* space2.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9227257F1BBA815800DBC92C /* space2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		922725471BBA57FC00DBC92C /* CopyFiles */ = {
+		9227255A1BBA633600DBC92C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = resources;
+			dstSubfolderSpec = 7;
 			files = (
+				922725801BBA815800DBC92C /* galaxy.png in CopyFiles */,
+				922725811BBA815800DBC92C /* space2.jpg in CopyFiles */,
+				9227257C1BBA6B3400DBC92C /* jupiter.bmp in CopyFiles */,
+				9227257D1BBA6B3400DBC92C /* space.bmp in CopyFiles */,
+				9227256B1BBA637400DBC92C /* earth.bmp in CopyFiles */,
+				9227256C1BBA637400DBC92C /* moon.bmp in CopyFiles */,
+				9227256D1BBA637400DBC92C /* sun.bmp in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		922725491BBA57FC00DBC92C /* project_jupiter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = project_jupiter; sourceTree = BUILT_PRODUCTS_DIR; };
-		9227254C1BBA57FC00DBC92C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9227255C1BBA633600DBC92C /* project_jupiter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = project_jupiter; sourceTree = BUILT_PRODUCTS_DIR; };
+		9227255F1BBA633600DBC92C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		922725661BBA635400DBC92C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		922725681BBA637400DBC92C /* earth.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = earth.bmp; path = ../resources/img/earth.bmp; sourceTree = "<group>"; };
+		922725691BBA637400DBC92C /* moon.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = moon.bmp; path = ../resources/img/moon.bmp; sourceTree = "<group>"; };
+		9227256A1BBA637400DBC92C /* sun.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = sun.bmp; path = ../resources/img/sun.bmp; sourceTree = "<group>"; };
+		9227256E1BBA63A100DBC92C /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = "../library/Simple OpenGL Image Library/src/image_DXT.c"; sourceTree = "<group>"; };
+		9227256F1BBA63A100DBC92C /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = "../library/Simple OpenGL Image Library/src/image_helper.c"; sourceTree = "<group>"; };
+		922725701BBA63A100DBC92C /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = "../library/Simple OpenGL Image Library/src/SOIL.c"; sourceTree = "<group>"; };
+		922725711BBA63A100DBC92C /* SOIL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SOIL.h; path = "../library/Simple OpenGL Image Library/src/SOIL.h"; sourceTree = "<group>"; };
+		922725721BBA63A100DBC92C /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = "../library/Simple OpenGL Image Library/src/stb_image_aug.c"; sourceTree = "<group>"; };
+		922725781BBA63F900DBC92C /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = "../library/Simple OpenGL Image Library/src"; sourceTree = "<group>"; };
+		9227257A1BBA6B3400DBC92C /* jupiter.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = jupiter.bmp; path = ../resources/img/jupiter.bmp; sourceTree = "<group>"; };
+		9227257B1BBA6B3400DBC92C /* space.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = space.bmp; path = ../resources/img/space.bmp; sourceTree = "<group>"; };
+		9227257E1BBA815800DBC92C /* galaxy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = galaxy.png; path = ../resources/img/galaxy.png; sourceTree = "<group>"; };
+		9227257F1BBA815800DBC92C /* space2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = space2.jpg; path = ../resources/img/space2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		922725461BBA57FC00DBC92C /* Frameworks */ = {
+		922725591BBA633600DBC92C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922725671BBA635400DBC92C /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		922725401BBA57FC00DBC92C = {
+		922725531BBA633600DBC92C = {
 			isa = PBXGroup;
 			children = (
-				9227254B1BBA57FC00DBC92C /* project_jupiter */,
-				9227254A1BBA57FC00DBC92C /* Products */,
+				9227257E1BBA815800DBC92C /* galaxy.png */,
+				9227257F1BBA815800DBC92C /* space2.jpg */,
+				9227257A1BBA6B3400DBC92C /* jupiter.bmp */,
+				9227257B1BBA6B3400DBC92C /* space.bmp */,
+				922725781BBA63F900DBC92C /* src */,
+				9227256E1BBA63A100DBC92C /* image_DXT.c */,
+				9227256F1BBA63A100DBC92C /* image_helper.c */,
+				922725701BBA63A100DBC92C /* SOIL.c */,
+				922725711BBA63A100DBC92C /* SOIL.h */,
+				922725721BBA63A100DBC92C /* stb_image_aug.c */,
+				922725681BBA637400DBC92C /* earth.bmp */,
+				922725691BBA637400DBC92C /* moon.bmp */,
+				9227256A1BBA637400DBC92C /* sun.bmp */,
+				922725661BBA635400DBC92C /* OpenGL.framework */,
+				9227255E1BBA633600DBC92C /* project_jupiter */,
+				9227255D1BBA633600DBC92C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9227254A1BBA57FC00DBC92C /* Products */ = {
+		9227255D1BBA633600DBC92C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				922725491BBA57FC00DBC92C /* project_jupiter */,
+				9227255C1BBA633600DBC92C /* project_jupiter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9227254B1BBA57FC00DBC92C /* project_jupiter */ = {
+		9227255E1BBA633600DBC92C /* project_jupiter */ = {
 			isa = PBXGroup;
 			children = (
-				9227254C1BBA57FC00DBC92C /* main.cpp */,
+				9227255F1BBA633600DBC92C /* main.c */,
 			);
 			path = project_jupiter;
 			sourceTree = "<group>";
@@ -65,13 +115,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		922725481BBA57FC00DBC92C /* project_jupiter */ = {
+		9227255B1BBA633600DBC92C /* project_jupiter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 922725501BBA57FC00DBC92C /* Build configuration list for PBXNativeTarget "project_jupiter" */;
+			buildConfigurationList = 922725631BBA633600DBC92C /* Build configuration list for PBXNativeTarget "project_jupiter" */;
 			buildPhases = (
-				922725451BBA57FC00DBC92C /* Sources */,
-				922725461BBA57FC00DBC92C /* Frameworks */,
-				922725471BBA57FC00DBC92C /* CopyFiles */,
+				922725581BBA633600DBC92C /* Sources */,
+				922725591BBA633600DBC92C /* Frameworks */,
+				9227255A1BBA633600DBC92C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -79,53 +129,62 @@
 			);
 			name = project_jupiter;
 			productName = project_jupiter;
-			productReference = 922725491BBA57FC00DBC92C /* project_jupiter */;
+			productReference = 9227255C1BBA633600DBC92C /* project_jupiter */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		922725411BBA57FC00DBC92C /* Project object */ = {
+		922725541BBA633600DBC92C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "김다혜";
 				TargetAttributes = {
-					922725481BBA57FC00DBC92C = {
+					9227255B1BBA633600DBC92C = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
-			buildConfigurationList = 922725441BBA57FC00DBC92C /* Build configuration list for PBXProject "project_jupiter" */;
+			buildConfigurationList = 922725571BBA633600DBC92C /* Build configuration list for PBXProject "project_jupiter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 922725401BBA57FC00DBC92C;
-			productRefGroup = 9227254A1BBA57FC00DBC92C /* Products */;
+			mainGroup = 922725531BBA633600DBC92C;
+			productRefGroup = 9227255D1BBA633600DBC92C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				922725481BBA57FC00DBC92C /* project_jupiter */,
+				9227255B1BBA633600DBC92C /* project_jupiter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		922725451BBA57FC00DBC92C /* Sources */ = {
+		922725581BBA633600DBC92C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9227254D1BBA57FC00DBC92C /* main.cpp in Sources */,
+				922725791BBA63F900DBC92C /* src in Sources */,
+				922725731BBA63A100DBC92C /* image_DXT.c in Sources */,
+				922725741BBA63A100DBC92C /* image_helper.c in Sources */,
+				922725751BBA63A100DBC92C /* SOIL.c in Sources */,
+				922725761BBA63A100DBC92C /* SOIL.h in Sources */,
+				922725771BBA63A100DBC92C /* stb_image_aug.c in Sources */,
+				922725601BBA633600DBC92C /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9227254E1BBA57FC00DBC92C /* Debug */ = {
+		922725611BBA633600DBC92C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -167,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		9227254F1BBA57FC00DBC92C /* Release */ = {
+		922725621BBA633600DBC92C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -202,16 +261,18 @@
 			};
 			name = Release;
 		};
-		922725511BBA57FC00DBC92C /* Debug */ = {
+		922725641BBA633600DBC92C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		922725521BBA57FC00DBC92C /* Release */ = {
+		922725651BBA633600DBC92C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -219,24 +280,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		922725441BBA57FC00DBC92C /* Build configuration list for PBXProject "project_jupiter" */ = {
+		922725571BBA633600DBC92C /* Build configuration list for PBXProject "project_jupiter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9227254E1BBA57FC00DBC92C /* Debug */,
-				9227254F1BBA57FC00DBC92C /* Release */,
+				922725611BBA633600DBC92C /* Debug */,
+				922725621BBA633600DBC92C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		922725501BBA57FC00DBC92C /* Build configuration list for PBXNativeTarget "project_jupiter" */ = {
+		922725631BBA633600DBC92C /* Build configuration list for PBXNativeTarget "project_jupiter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				922725511BBA57FC00DBC92C /* Debug */,
-				922725521BBA57FC00DBC92C /* Release */,
+				922725641BBA633600DBC92C /* Debug */,
+				922725651BBA633600DBC92C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 922725411BBA57FC00DBC92C /* Project object */;
+	rootObject = 922725541BBA633600DBC92C /* Project object */;
 }
